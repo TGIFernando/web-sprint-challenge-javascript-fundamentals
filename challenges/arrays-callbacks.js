@@ -51,6 +51,8 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 let populationTotal = 0;
+populationTotal = zooAnimals.reduce((a, c) => a + c.population, 0);
+console.log(`TASK 4: `)
 console.log(populationTotal);
 
 
