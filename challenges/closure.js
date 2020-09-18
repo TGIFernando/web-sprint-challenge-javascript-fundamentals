@@ -6,19 +6,31 @@
 const external = "I'm outside the function";
 
 function myFunction() {
-  console.log(external);
-  const internal = "Hello! I'm inside myFunction!";
+    console.log(external);
+    const internal = "Hello! I'm inside myFunction!";
 
-  function nestedFunction() {
-    console.log(internal);
-  };
-  nestedFunction();
+    function nestedFunction() {
+        console.log(internal);
+    };
+    nestedFunction();
 }
 myFunction();
 
 // Explanation: 
-
+/*Nested functions are like the babies of their parent function so they can inherit the parents variables*/
 
 /* Task 2: Counter */
+function summation(num) {
+    let count = 0;
+    return function addCounter() {
+        for (let i = 0; i <= num; i++) {
+            count += i;
+        }
+        return count;
+    }
+}
+console.log(`TASK 2 Closures: `);
+let sum4 = summation(4);
+console.log(sum4);
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
